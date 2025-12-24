@@ -48,7 +48,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text("Пожалуйста, выбери кнопку.", reply_markup=markup)
 
 if __name__ == '__main__':
-    app = ApplicationBuilder().token('7512225355:AAFSWO6orqcm-s9lszvcc-nCgX8XyuJOnRg').build()
+    app = ApplicationBuilder().token('TOKEN').build()
 
     app.add_handler(CommandHandler('start', start))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
